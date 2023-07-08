@@ -9,7 +9,22 @@
 </script>
 
 <style scoped>
-    h1 {
-        color: blue;
-    }
+  #page-wrap {
+    margin-top: 16px;
+    padding: 16px;
+    max-width: 600px;
+  }
+
+  #img-wrap {
+    text-align: center;
+  }
+
+  img {
+    width: 400px;
+  }
+
+  #service-details {
+    padding: 16px;
+    position: relative;
+  }
 </style>

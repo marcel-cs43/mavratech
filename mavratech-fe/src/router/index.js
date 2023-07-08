@@ -9,7 +9,7 @@ const routes = [
     component: CategoryPage,
   }, 
   {
-    path: "/service",
+    path: "/service/:id",
     name: "ServiceDetail",
     component: ServiceDetailPage,
   },
