@@ -45,6 +45,8 @@
     };
 </script>
 
+<!-- To-do: Fix the style of whole web-site according to plan  -->
+
 <style scoped>
   .grid-wrap {
     display: flex;
