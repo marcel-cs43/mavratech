@@ -17,25 +17,30 @@
 
 <style>
   * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial;
   }
 
-  #page-wrap {
-    margin: auto;
-    max-width: 800px;
+  body {
+    font-family: 'montseratt', sans-serif;
+  }
+
+  main {
+    width: 100vw;
     min-height: 100vh;
+    overflow: hidden;
+
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  button {
-    background-color: black;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    outline: 0;
-    padding: 16px;
+  .products {
+    display: flex;
+    max-width: 1280px;
+    padding: 25px;
+    margin: 0 auto;
   }
 </style>

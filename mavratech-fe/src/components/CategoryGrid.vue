@@ -21,7 +21,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
   .grid-wrap {
     display: flex;
