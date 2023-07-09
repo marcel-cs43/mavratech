@@ -1,11 +1,31 @@
 <template>
-    <h1>This is the service detail page</h1>
+  <div id="page-wrap" v-if="service">
+    <div id="img-wrap">
+      <img v-bind:src="service.imageUrl" />
+    </div>
+    <div id="service-details">
+      <h1>{{ service.name }}</h1>
+      <h4>Description</h4>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+  <NotFoundPage v-else/>
 </template>
 <!-- To-Do: -->
 <script>
-    export default {
-        name: "ServiceDetailPage",
-    };
+  import { services } from "../mock-data"
+  import NotFoundPage from './NotFoundPage.vue';
+  export default {
+      name: "ServiceDetailPage",
+      components: {
+        NotFoundPage,
+      },
+      data() {
+        return {
+          service: services.find((s) => s.id === this.$route.params.id),
+        }
+      }
+  };
 </script>
 
 <style scoped>
