@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-wrap">
+  <div class="grid-wrap" @mousemove="mousemove">
     <CategoryGridItem
       v-for="category in categories"
       :key="category.id"
@@ -25,7 +25,7 @@ export default {
   .grid-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
   }
 </style>
