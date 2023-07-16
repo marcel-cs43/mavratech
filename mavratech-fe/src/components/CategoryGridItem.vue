@@ -8,7 +8,7 @@
         <h2>{{ category.name }}</h2>
         <h3>{{ category.description }}</h3>
         <div>
-          <div v-for="serviceId in category.services" :key="serviceId">
+          <div class="service" v-for="serviceId in category.services" :key="serviceId">
               <router-link :to="getServiceDetailRoute(serviceId)">
                 {{ getServiceName(serviceId) }}
               </router-link>
@@ -37,7 +37,6 @@ export default {
   },
 };
 </script>
-<!-- To-do: add hover effect, have fixed item sizes -->
 <style scoped>
   .category {
     position: relative;
@@ -57,7 +56,7 @@ export default {
     height: 305px;
     background: radial-gradient(circle at 10% 20%, rgb(238, 56, 56) 0%, rgba(206, 21, 0, 0.92) 90.1%);
     border-radius: 20px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
   }
   .category .card:hover {
@@ -92,6 +91,8 @@ export default {
     height: 31px;
     overflow: hidden;
     text-align: center;
+    color: #444;
+    font-family: 'montseratt', sans-serif;
     transition: 0.5s;
   }
   .category .card:hover .content{
@@ -101,6 +102,18 @@ export default {
   .category .card .content h2 {
     font-size: 1.5em;
     font-weight: 700;
+    color: inherit;
+    font-family: inherit;
+  }
+  .category .card .content h3 {
+    font-weight: 700;
+    color: inherit;
+    font-family: inherit;
+  }
+  .category .card .content .service a {
+    color: inherit;
+    text-decoration: none;
+    font-family: inherit;
   }
 </style>
 
